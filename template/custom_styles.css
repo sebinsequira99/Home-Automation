@@ -15,6 +15,18 @@ body {
   height: 380px;
 }
 
+#coverpage{
+/*  background-image: url("../images/stockvault-connectivity-idea-with-lightbulb1742541.jpg");*/
+/*  background-image: url("../images/Internet-of-things1.jpg");*/
+/*  background-image: url("../images/internet-of-things.png");*/
+  background-image: url("../images/digital-abstract-woman-hand_Fotolia_47853845_Subscription_XL.jpg");
+  background-size: 100% 100%;
+}
+
+.inner-cover{
+  padding-top: 400px;
+  padding-left: 50px;
+}
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
