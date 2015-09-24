@@ -178,8 +178,35 @@
       </footer>
     </div> <!-- /container -->
     </div>
-<!--     <div class="section">Some section</div>
-    <div class="section">Some section</div> -->
+
+    <div class="section">
+    <div class="container" id="controlpanel">
+    	<div class="row">
+    		<h2>
+    		<span><img src="../images/Raspberry_Pi_Logo.svg.png" alt="..." width="75" height="75"/></span>
+    		Raspberry PI Control Panel
+    		</h2>
+    	</div>
+
+    	<div class="row">
+			<div id="gauge" class="200x160px">
+			</div>
+			<div class="switch" >
+				<input type="checkbox">
+				<label></label>
+			</div>
+		</div> 
+
+		<div class="row">
+			<div class="col-md-2 col-md-offset-10">
+				<button type="button" class="btn btn-warning btn-block">Reboot</button>
+				<button type="button" class="btn btn-danger btn-block">Shutdown</button> 
+			</div>
+		</div>
+    </div>
+    </div>
+
+<!--     <div class="section">Some section</div> -->
 	</div>
 
 
@@ -194,22 +221,35 @@
     <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
     <script src="../assets/jquery.easings.min.js"></script>
 
-	  <!-- This following line is only necessary in the case of using the plugin option `scrollOverflow:true` -->
-	  <script type="text/javascript" src="../assets/jquery.slimscroll.min.js"></script>
+	<!-- This following line is only necessary in the case of using the plugin option `scrollOverflow:true` -->
+	<script type="text/javascript" src="../assets/jquery.slimscroll.min.js"></script>
 
-	  <script type="text/javascript" src="../assets/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="../assets/jquery.fullPage.js"></script>
 
-	  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	  <!-- [if lt IE 9] -->
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- [if lt IE 9] -->
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	  <!-- [endif] -->
+	<!-- [endif] -->
 
     <script type="text/javascript">
-    $(document).ready(function() {
-    $('#fullpage').fullpage();
-    });
+    	$(document).ready(function() {
+    	$('#fullpage').fullpage();
+    	});
     </script>
+
+    <script src="../assets/raphael-2.1.4.min.js"></script>
+	<script src="../assets/justgage-1.1.0.min.js"></script>
+
+	<script>
+  		var g = new JustGage({
+    	id: "gauge",
+    	value: 67,
+    	min: 0,
+    	max: 100,
+    	title: "Brightness"
+  		});
+	</script>
 
   </body>
 </html>
